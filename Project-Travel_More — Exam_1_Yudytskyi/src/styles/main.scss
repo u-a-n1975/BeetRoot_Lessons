@@ -1,0 +1,45 @@
+// Initial styles   
+
+@import "./../styles/animations",
+"./../styles/reboot",
+"./../styles/fonts",
+"./../styles/base",
+"./../styles/common",
+"./mixins.scss",
+"./functions.scss";
+
+// Constants
+@import "./constants/configs";
+
+// Blocks  
+
+@import "./blocks/title-block.scss",
+"./blocks/reservation-block.scss",
+"./blocks/img-block.scss",
+"./blocks/info-block.scss",
+"./blocks/search-form.scss",
+"./blocks/social-block.scss";
+
+
+// Sections
+
+@import "./sections/header",
+"./sections/hero",
+"./sections/choose",
+"./sections/works",
+"./sections/section",
+"./sections/testimonial",
+"./sections/footer";
+
+
+
+
+.main-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.contrnt-container {
+  width: 100%;
+  max-width: 1110px;
+}

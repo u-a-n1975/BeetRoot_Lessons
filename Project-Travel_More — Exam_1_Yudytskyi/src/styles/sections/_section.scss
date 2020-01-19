@@ -1,0 +1,32 @@
+.section {
+  display: flex;
+  justify-content: center;
+  min-height: 1400px;
+  background: url(./../assets/Section/4.group/group_images/Group1.png) repeat-x, url(./../assets/Section/4.group/group_images/Group2.png);
+
+
+  &__content-conainer {
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 130px;
+  }
+
+  &__right,
+  &__left {
+    max-width: 540px;
+    width: 100%;
+    min-height: 370px;
+    padding: 40px 40px 45px 30px;
+    background-color: rgb(35, 35, 35);
+    opacity: 0.902;
+
+    @media (max-width:$deviceSizeXS) {
+      padding: 20px 15px 20px 15px;
+    }
+  }
+
+  &__left {
+    align-self: flex-start;
+  }
+}

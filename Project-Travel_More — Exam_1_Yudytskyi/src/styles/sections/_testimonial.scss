@@ -1,0 +1,45 @@
+.testimonial {
+  min-height: 730px;
+  border: 1px solid #707070;
+  @include bgimg("./../assets/Section/5.testimonial/testimonial_images/testimonial-fon.png");
+
+  &__content-conainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 115px;
+  }
+
+  &__title {
+    margin-bottom: 90px;
+    font-size: 36px;
+    font-family: "Aleo", sans-serif;
+    line-height: 1.1;
+
+    &:hover {
+      text-shadow: 1px 1px 2px black, 0 0 30px gold;
+      color: #5474FD;
+    }
+
+    @media (max-width:$deviceSizeXS) {
+      font-size: 30px;
+      white-space: unset;
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    &:hover {
+      text-shadow: 1px 1px 2px black, 0 0 20px gold;
+      color: #5474FD;
+    }
+  }
+
+  &__info-block {}
+
+  @media (max-width:$deviceSizeMD) {
+    &__info-block {
+      flex-direction: column;
+    }
+  }
+}

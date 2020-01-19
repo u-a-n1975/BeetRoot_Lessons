@@ -1,0 +1,18 @@
+.works {
+  display: flex;
+  justify-content: center;
+  min-height: 335px;
+  height: 100%;
+  padding: 44px 0;
+  background-color: #333333;
+
+  @media (max-width:$deviceSizeXS) {
+    align-items: center;
+    min-height: 605px;
+  }
+
+  &__content-conainer {
+    align-items: flex-start;
+    padding: 0 70px;
+  }
+}

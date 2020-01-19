@@ -1,0 +1,103 @@
+.title-block {
+  width: 100%;
+
+  &__subtitle {
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-family: "JosefinSans", sans-serif;
+    color: #E8E8E8;
+    line-height: 1.3;
+    text-transform: capitalize;
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-size: 36px;
+    font-family: "Aleo", sans-serif;
+    line-height: 1.1;
+    text-transform: capitalize;
+    white-space: nowrap;
+    text-align: left;
+    transition: text-shadow 0.3s ease 0s;
+
+    &:hover {
+      text-shadow: 1px 1px 2px black, 0 0 30px gold;
+      color: #5474FD;
+    }
+
+    @media (max-width:$deviceSizeXS) {
+      font-size: 28px;
+      white-space: unset;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-family: "JosefinSans", sans-serif;
+    line-height: 1.625;
+    text-align: left;
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 225px;
+    height: 60px;
+    border: 1px solid #707070;
+    background-color: #5474FD;
+    transition: border, box-shadow, text-shadow 0.3s ease 0s;
+    overflow: hidden;
+    z-index: 1;
+
+    a {
+      font-size: 16px;
+      font-family: "Aleo", sans-serif;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-weight: 400;
+      line-height: 1.625;
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      z-index: 3;
+    }
+
+    &--fon {
+      position: absolute;
+      left: 0;
+      width: 55px;
+      height: 60px;
+      background-color: #496BFE;
+      z-index: 2;
+
+      &:nth-child(2) {
+        left: 55px;
+        width: 90px;
+        transform: rotate(45deg);
+        transform-origin: top left;
+      }
+    }
+
+
+    &:hover {
+      border: 2px solid #FFFFFF;
+      box-shadow: 0 0 15px #496BFE;
+      color: #ffffff;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    &:active {
+      border: 7px solid #5474FD;
+      background-color: rgb(71, 104, 253);
+      box-shadow: 0 0 15px gold;
+      transform: translateY(3px) scale(0.9);
+    }
+  }
+}

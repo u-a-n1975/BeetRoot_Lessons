@@ -1,0 +1,183 @@
+.header {
+	position: absolute;
+	width: 100%;
+	z-index: 50;
+	left: 0;
+	top: 0px;
+
+	&__row {
+		@include flexbox();
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__menu {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__logo {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		z-index: 2;
+		@include tr(-50%, 0px, 0px);
+	}
+}
+
+.menu {
+
+	&__icon {}
+
+	&__body {
+		@include flexbox();
+		justify-content: center;
+		align-items: center;
+
+		@media (max-width:$deviceSizeSM) {
+			flex-direction: column;
+		}
+	}
+
+	&__list {
+		@include flexbox();
+		width: 270px;
+		justify-content: space-between;
+
+		&_l {
+			@include flexbox();
+			width: 270px;
+			height: 54px;
+			justify-content: space-between;
+			align-items: center;
+			@include flexorder(1);
+
+			li {
+				@include flexbox();
+				width: 90px;
+				justify-content: center;
+			}
+		}
+
+		&_c {
+			@include flexbox();
+			@include flexorder(2);
+			width: 82px;
+			height: 54px;
+			justify-content: center;
+
+			&:hover {
+				opacity: 0.35;
+			}
+		}
+
+		&_r {
+			@include flexbox();
+			width: 270px;
+			height: 54px;
+			justify-content: space-between;
+			align-items: center;
+			@include flexorder(3);
+
+			li {
+				@include flexbox();
+				width: 90px;
+				justify-content: center;
+			}
+		}
+
+		@media (max-width:$deviceSizeSM) {
+			&_l {
+				width: 330px;
+				order: 2;
+			}
+
+			&_c {
+				order: 1;
+			}
+
+			&_r {
+				width: 330px;
+				order: 3;
+			}
+		}
+	}
+
+
+	&__link {
+		font-size: 13px;
+		color: #989696;
+		line-height: 1.308;
+		text-transform: capitalize;
+		letter-spacing: 2.6px;
+
+		&:hover {
+			color: #010101;
+		}
+	}
+
+
+	@media (max-width:$deviceSizeXS) {
+		&__body {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			overflow: auto;
+			@include tr(0px, -100%, 0px);
+			@include anim(0.3s, 0s);
+
+		}
+
+	}
+}
+
+.icon-menu {
+	@media (max-width:$deviceSizeXS) {
+		display: block;
+		position: absolute;
+		top: 33px;
+		right: 15px;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+
+		span {
+			@include anim(0.3s, 0s);
+			top: 8px;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #4d4959;
+
+			&:first-child {
+				top: 0px;
+			}
+
+			&:last-child {
+				top: auto;
+				bottom: 0px;
+			}
+		}
+
+		&.active {
+			span {
+				@include scale(0);
+				background-color: #fff;
+
+				&:first-child {
+					@include rotate(-45deg);
+					top: 8px;
+				}
+
+				&:last-child {
+					@include rotate(45deg);
+					bottom: 8px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+// Initial styles
+
+@import "./../styles/fonts";
+@import "./../styles/animations";
+@import "./../styles/reboot";
+@import "./../styles/base";
+@import "./../styles/common";
+@import "./mixins.scss";
+
+// Sections
+
+@import "./sections/hero";
+@import "./sections/header";
+@import "./sections/worc-block";
+@import "./sections/slider-block";
+@import "./sections/subscribe";
+@import "./sections/footer";
+@import "./sections/shop";

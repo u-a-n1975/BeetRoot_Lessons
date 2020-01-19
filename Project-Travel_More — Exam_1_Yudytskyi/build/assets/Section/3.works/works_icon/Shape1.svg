@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 778 96.293">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-dasharray: 0 5;
+        opacity: 0.502;
+      }
+    </style>
+  </defs>
+  <path id="Shape_1" data-name="Shape 1" class="cls-1" d="M513,1661s192.477-212.458,393.059,0c0,0,176.269-213.754,383.941,0" transform="translate(-512.5 -1565.462)"/>
+</svg>

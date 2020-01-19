@@ -1,0 +1,102 @@
+@import "./../constants/index.scss";
+@import "mixins.scss";
+
+// .anhor {
+//   display: none;
+// }
+
+//===============section top-block===============
+
+.main-container {
+  max-width: 1600px;
+  @include flexbox();
+  flex-direction: column;
+
+  &__top-block {
+    min-height: 100vh;
+    @include bgimg("./../assets/top-img.jpg");
+    @include flexbox();
+    background-attachment: fixed;
+    flex-basis: 800px;
+  }
+}
+
+.container {
+  max-width: 1130px;
+  padding: 0px 15px;
+  margin: 0px auto;
+}
+
+//===========end section top-block===============
+
+//------------------------------------------------
+
+//===============section about-block===============
+.about-block {
+  height: 470px;
+  padding: 120px 0;
+  background-color: #f7f7f7;
+
+  &__block {}
+
+  @media (max-width:$deviceSizeSM) {
+    padding: 80px 0;
+  }
+
+  @media (max-width:$deviceSizeXS) {
+    padding: 30px 0;
+  }
+}
+
+.block {
+  text-align: center;
+
+  &__icon {
+    margin: 0px 0px 30px 0px;
+  }
+
+  &__title {
+    color: #353738;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    margin: 0px 0px 18px 0px;
+  }
+
+  &__text {
+    color: #848789;
+    font-size: 18px;
+    line-height: 34px;
+
+    &_line {
+      text-align: justify;
+      font-size: 16px;
+      line-height: 30px;
+
+      &:after {
+        content: '';
+        display: block;
+        margin: 35px auto 0px auto;
+        width: 50px;
+        height: 3px;
+        background-color: #ebebeb;
+      }
+    }
+  }
+
+  @media (max-width:$deviceSizeLS) {
+    &__text {
+      &_line {
+        &:after {
+          margin: 15px auto 0px auto;
+        }
+      }
+    }
+  }
+}
+
+//===========end section about-block===============
+
+//------------------------------------------------

@@ -1,0 +1,15 @@
+body {
+  height: 100%;
+  min-width: 320px;
+  $minwidth: 320px;
+  max-width: 1920px;
+  width: 100vw;
+  margin: auto;
+  font-size: 16px;
+  color: #FEFEFE;
+  border: 1px solid #222429;
+  line-height: 1;
+  font-size: 14px;
+  font-family: "Roboto";
+  $fontfamily: "Roboto";
+}

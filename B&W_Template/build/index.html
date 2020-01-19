@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/Header_Logo.png">
+    <title>B&W_Template</title>
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <!-- Подключение javascript -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+    <!-- Плавный переход по ссылке -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#menu").on("click", "a", function (event) {
+                //отменяем стандартную обработку нажатия по ссылке
+                event.preventDefault();
+
+                //забираем идентификатор бока с атрибута href
+                var id = $(this).attr('href'),
+
+                    //узнаем высоту от начала страницы до блока на который ссылается якорь
+                    top = $(id).offset().top;
+
+                //анимируем переход на расстояние - top за 1500 мс
+                $('body,html').animate({
+                    scrollTop: top
+                }, 1500);
+            });
+        });
+    </script>
+
+    <!-- Плавный возврат в меню по ссылке -->
+    <script type="text/javascript">
+        function up() {
+            var top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+            if (top > 0) {
+                window.scrollBy(0, ((top + 100) / -10));
+                t = setTimeout('up()', 20);
+            } else clearTimeout(t);
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="content-conainer">
+        </div>
+        <div class="header__row">
+            <nav id="menu" class="header__menu menu">
+                <div class="menu__icon icon-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu__body">
+                    <ul class="menu__list_l">
+                        <li><a href="#home" class="menu__link">home</a></li>
+                        <li><a href="#about" class="menu__link">about as</a></li>
+                        <li><a href="#team" class="menu__link">team</a></li>
+                    </ul>
+                    <ul class="menu__list_c"></ul>
+                    <ul class="menu__list_r">
+                        <li><a href="#servises" class="menu__link">servises</a></li>
+                        <li><a href="#blog" class="menu__link">blog</a></li>
+                        <li><a href="#contact" class="menu__link">contact us</a></li>
+                    </ul>
+                </div>
+                <div class="header__logo"><img src="./assets/Header_Logo.png" alt=""></div>
+            </nav id="menu">
+        </div>
+    </header>
+    <main class="main-container">
+        <section id="home" class="main-container__home">
+            <div class="home content-conainer">
+                <a name="home"></a>
+                <div class="title-block home-title">
+                    <h1 class="title-block__title home-title__title">
+                        We build it with passion
+                    </h1>
+                    <div class="title-block__subtitle home-title__subtitle">
+                        Just to be clear, we do this for fun not for you, just kidding.
+                    </div>
+                    <div class="title-block__btn home-title__btn">
+                        <a href="" class="block__btn">read more</a>
+                    </div>
+                    <div class="points">
+                        <div class="points__transperent"></div>
+                        <div class="points__pale"></div>
+                        <div class="points__normal"></div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="main-container__about">
+            <a name="about "></a>
+            <div class="about content-conainer">
+                <div class="about__divider"></div>
+                <div class="about-yearas">
+                    <div class="about__year">
+                        <div class="year-block">
+                            <div class="year-block__around">
+                                <div class="year-block__around_fon"></div>
+                            </div>
+                            <h1 class="year-block__title">
+                                2011
+                            </h1>
+                            <div class="year-block__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiselit. Vivamus varius nec diam vitae
+                                hendrerit bigus mit.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__year rev">
+                        <div class="year-block">
+                            <div class="year-block__around">
+                                <div class="year-block__around_fon"></div>
+                            </div>
+                            <h1 class="year-block__title">
+                                2012
+                            </h1>
+                            <div class="year-block__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiselit. Vivamus varius nec diam vitae
+                                hendrerit
+                                bigus mit.
+                                <br> Begitus vit urna nulla.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__year">
+                        <div class="year-block">
+                            <div class="year-block__around">
+                                <div class="year-block__around_fon"></div>
+                            </div>
+                            <h1 class="year-block__title">
+                                2013
+                            </h1>
+                            <div class="year-block__text">
+                                Sed at auctor sem, nec tincidunt elit. Pellentesque enim turpis, porttitor ac orci in,
+                                ultrices efficitur nisl. Ut odio libero, sodales a tellus eleifend, suscipit dapibus mi.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__year rev">
+                        <div class="year-block">
+                            <div class="year-block__around">
+                                <div class="year-block__around_fon"></div>
+                            </div>
+                            <h1 class="year-block__title rev_title">
+                                2014
+                            </h1>
+                            <div class="year-block__text rev_text">
+                                Lorem ipsum dolor sit amet, consectetur adipiselit. Vivamus varius nec diam vitae
+                                hendrerit
+                                bigus mit.
+                                <br> Begitus vit urna nulla.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about__img about__img_w">
+                <img src="./assets/images/About_as/Buildings-White.png" alt="">
+            </div>
+            <div class="about__img about__img_b">
+                <img src="./assets/images/About_as/Buildings-Black.png" alt="">
+            </div>
+        </section>
+        <section id="team" class="main-container__team">
+            <div class="team content-conainer">
+                <div class="title-block team-title">
+                    <span class="title-block__title team-title__title">
+                        This is our team
+                    </span>
+                    <span class="title-block__subtitle team-title__subtitle">
+                        We are small but effective and ...
+                    </span>
+                </div>
+                <div class="team__row team__row_layer-block">
+                    <div class="layer-block layer01">
+                        <div class="layer-block__foto">
+                            <img src="./assets/images/Teams/Layer_1.png" alt="user-photo">
+                        </div>
+                        <span class="layer-block__name">
+                            justin twice
+                        </span>
+                        <span class="layer-block__function">
+                            founder & CEO
+                        </span>
+                        <div class="layer-block__social-block">
+                            <img class="layer-block__social-block_twitter"
+                                src="./assets/images/Teams/Social/twitter.png" alt="twitter">
+                            <img src="./assets/images/Teams/Social/instagram.png" alt="instagram">
+                        </div>
+                    </div>
+                    <div class="layer-block layer02">
+                        <div class="layer-block__foto">
+                            <img src="./assets/images/Teams/Layer_2.png" alt="user-photo">
+                        </div>
+                        <span class="layer-block__name">
+                            antonio never
+                        </span>
+                        <span class="layer-block__function">
+                            someone & somewhere
+                        </span>
+                        <div class="layer-block__social-block">
+                            <img class="layer-block__social-block_twitter"
+                                src="./assets/images/Teams/Social/twitter.png" alt="twitter">
+                            <img src="./assets/images/Teams/Social/instagram.png" alt="instagram">
+                        </div>
+                    </div>
+                    <div class="layer-block layer03">
+                        <div class="layer-block__foto">
+                            <img src="./assets/images/Teams/Layer_3.png" alt="user-photo">
+                        </div>
+                        <span class="layer-block__name">
+                            mark once
+                        </span>
+                        <span class="layer-block__function">
+                            designer & front-end developer
+                        </span>
+                        <div class="layer-block__social-block">
+                            <img class="layer-block__social-block_twitter"
+                                src="./assets/images/Teams/Social/twitter.png" alt="twitter">
+                            <img src="./assets/images/Teams/Social/instagram.png" alt="instagram">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            </div>
+        </section>
+        <section id="servises" class="main-container__servises">
+            <div class="main-container__servises_fon"></div>
+            <div class="servises content-conainer">
+                <div class="title-block servises-title">
+                    <span class="title-block__title servises-title__title">
+                        We provide you everything
+                    </span>
+                    <span class="title-block__subtitle servises-title__subtitle">
+                        Maybe not everything, but we provide you some stuff.
+                    </span>
+                </div>
+
+
+                <div class="servises__icon-block servises-icon">
+
+                    <div class="title-block__icon analytics-icon">
+                        <div class="title-block__icon_img analytics-icon__icon_img">
+                            <img class="down" src="./assets/images/Servises/icon/Ellipse.png" alt="Ellipse">
+                            <img class="top" src="./assets/images/Servises/icon/analitics.png" alt="Ellipse">
+                        </div>
+                        <span class="title-block__title analytics-icon__title">
+                            Some Analytics
+                        </span>
+                        <span class="title-block__subtitle analytics-icon__subtitle">
+                            Aenean nisi lectus, convallis non lorem sit amet, rhoncus malesuada justo
+                        </span>
+                    </div>
+
+                    <div class="title-block__icon provide-icon">
+                        <div class="title-block__icon_img provide-icon__icon_img">
+                            <img class="down" src="./assets/images/Servises/icon/Ellipse.png" alt="Ellipse">
+                            <img class="top" src="./assets/images/Servises/icon/HEART.png" alt="Ellipse">
+                        </div>
+                        <span class="title-block__title provide-icon__title">
+                            We provide you love
+                        </span>
+                        <span class="title-block__subtitle provide-icon__subtitle">
+                            Aenean nisi lectus, convallis non lorem sit amet, rhoncus malesuada justo
+                        </span>
+                    </div>
+
+                    <div class="title-block__icon cloud-icon">
+                        <div class="title-block__icon_img cloud-icon__icon_img">
+                            <img class="down" src="./assets/images/Servises/icon/Ellipse.png" alt="Ellipse">
+                            <img class="top" src="./assets/images/Servises/icon/CLOUD-UPLOAD.png" alt="Ellipse">
+                        </div>
+                        <span class="title-block__title cloud-icon__title">
+                            And Some Cloud
+                        </span>
+                        <span class="title-block__subtitle cloud-icon__subtitle">
+                            Aenean nisi lectus, convallis non lorem sit amet, rhoncus malesuada justo
+                        </span>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </section>
+        <section id="blog" class="main-container__blog">
+            <div class="blog">
+                <div class="title-block__btn blog-title__btn">
+                    <a href="" class="title-block__btn">visit our blog</a>
+                </div>
+                <div class="blog__imege">
+                    <img src="./assets/images/blog.png" alt="blog">
+                </div>
+            </div>
+
+        </section>
+        <section id="contact" class="main-container__contact">
+            <div class="contact">
+                <div class="contact__title-block title-block">
+                    <span class="title-block__title">
+                        Contac Us
+                    </span>
+                    <span class="title-block__subtitle">
+                        We know what we need to do
+                    </span>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+
+
+    <div id="back-top">
+        <a href="#" onclick="return up()">▲</a>
+    </div>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/backtop.js"></script>
+
+</body>
+
+</html>

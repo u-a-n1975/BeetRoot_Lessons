@@ -1,0 +1,76 @@
+//===============section twitter-block===============
+.twitter-block {
+	height: 470px;
+	padding: 120px 0;
+	background-color: #f7f7f7;
+	text-align: center;
+
+	&__block {}
+
+	@media (max-width:$deviceSizeSM) {
+		padding: 80px 0;
+	}
+
+	@media (max-width:$deviceSizeXS) {
+		padding: 30px 0;
+	}
+
+	&__icon {
+		margin: 0px 0px 35px 0px;
+	}
+
+	&__title {
+		color: #353738;
+		font-size: 18px;
+		font-weight: 700;
+		margin: 0px 0px 20px 0px;
+
+		span {
+			font-weight: 300;
+			color: #848789;
+		}
+	}
+
+	&__text {
+		text-align: center;
+		color: #848789;
+		font-size: 24px;
+		font-style: italic;
+		line-height: 34px;
+		margin: 0px 0px 55px 0px;
+	}
+
+	@media (max-width:$deviceSizeLS) {
+		padding: 50px 0 30px 0;
+
+		&__icon {
+			margin: 0px 0px 25px 0px;
+		}
+
+		&__title {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+}
+
+.slider {
+	display: flex;
+	justify-content: center;
+
+	&__dot {
+		margin: 0 5px;
+		@include size (12px, 12px);
+		border-radius: 50%;
+		cursor: pointer;
+		background-color: rgb(255, 255, 255);
+		border: 2px solid rgb(169, 175, 179);
+	}
+
+	&__dot-activ {
+		background-color: rgb(169, 175, 179);
+	}
+}
+
+//===========end section twitter-block===============
+
+//------------------------------------------------

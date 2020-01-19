@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/bike.png">
+    <title>H W Bicycle</title>
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <!-- Подключение javascript -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+    <!-- Плавный переход по ссылке -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#menu").on("click", "a", function (event) {
+                //отменяем стандартную обработку нажатия по ссылке
+                event.preventDefault();
+
+                //забираем идентификатор бока с атрибута href
+                var id = $(this).attr('href'),
+
+                    //узнаем высоту от начала страницы до блока на который ссылается якорь
+                    top = $(id).offset().top;
+
+                //анимируем переход на расстояние - top за 1500 мс
+                $('body,html').animate({
+                    scrollTop: top
+                }, 1500);
+            });
+        });
+    </script>
+
+    <!-- Плавный возврат в меню по ссылке -->
+    <script type="text/javascript">
+        function up() {
+            var top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+            if (top > 0) {
+                window.scrollBy(0, ((top + 100) / -10));
+                t = setTimeout('up()', 20);
+            } else clearTimeout(t);
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__row">
+            <nav id="menu" class="header__menu menu">
+                <div class="menu__icon icon-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu__body">
+                    <ul class="menu__list">
+                        <li><a href="#about" class="menu__link">about us</a></li>
+                        <li><a href="#work" class="menu__link">work</a></li>
+                        <li><a href="#shop" class="menu__link">shop</a></li>
+                        <li><a href="#contact" class="menu__link">contact</a></li>
+                    </ul>
+                </div>
+            </nav id="menu">
+            <div class="header__logo"><img src="./assets/Header_Logo.png" alt=""></div>
+        </div>
+    </header>
+    <main class="main-container">
+        <section class="main-container__top-block"></section>
+        <section id="about" class="main-container__about-block">
+            <a name="about"></a>
+            <div class='container'>
+                <div class="about-block block">
+                    <div class="block__icon">
+                        <img src="../build/assets/icons/title/about_Icon.png" alt="">
+                    </div>
+                    <h1 class="block__title">
+                        A NEW GENERATION OF VINTAGE BIKE
+                    </h1>
+                    <div class="block__text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                        an unknown printer took a galley of type and scrambled it to make a type specimen book. It
+                        has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="work" class="main-container__worc-block">
+            <a name="work"></a>
+            <div class="worc-block__vintage">
+                <div class="worc-block__column worc-block__column_b">
+                    <a href="" class="worc-block__item vintage-item">
+                        <span class="vintage-item__logo">
+                            <img src="../build/assets/images/work/logos/01.png" alt="">
+                        </span>
+                        <span class="vintage-item__image"></span>
+                    </a>
+                </div>
+                <div class="worc-block__column">
+                    <div class="worc-block__content block">
+                        <div class="block__icon">
+                            <img src="../build/assets/icons/title/vintage_Icon.png" alt="">
+                        </div>
+                        <h2 class="block__title">
+                            vintage Oliva
+                        </h2>
+                        <div class="block__text block__text_line">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                            1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                            specimen book. It has survived.
+                        </div>
+                    </div>
+                    <div class="worc-block__vintage-image"></div>
+                </div>
+            </div>
+            <div class="worc-block__boriosa">
+                <div class="worc-block__column worc-block__column_b">
+                    <a href="" class="worc-block__item boriosa-item">
+                        <span class="boriosa-item__logo">
+                            <img src="../build/assets/images/work/logos/02.png" alt="">
+                        </span>
+                        <span class="boriosa-item__image"></span>
+                    </a>
+                </div>
+                <div class="worc-block__column">
+                    <div class="worc-block__content block">
+                        <div class="block__icon">
+                            <img src="./assets/icons/title/boriosa_Icon.png" alt="">
+                        </div>
+                        <h2 class="block__title">
+                            La Boriosa
+                        </h2>
+                        <div class="block__text block__text_line">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                            1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                            specimen book. It has survived.
+                        </div>
+                    </div>
+                    <div class="worc-block__boriosa-image"></div>
+                </div>
+            </div>
+            <div class="worc-block__retro">
+                <div class="worc-block__column">
+                    <a href="" class="worc-block__item retro-item-l">
+                        <span class="retro-item-l__logo">
+                            <img src="../build/assets/images/work/logos/03.png" alt="">
+                        </span>
+                        <span class="retro-item__image"></span>
+                    </a>
+                </div>
+                <div class="worc-block__column">
+                    <div class="worc-block__content block">
+                        <div class="block__icon">
+                            <img src="./assets/icons/title/retro_Icon.png" alt="">
+                        </div>
+                        <h2 class="block__title">
+                            retrò Bike - M. Hulot
+                        </h2>
+                        <div class="block__text block__text_line">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                            1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                            specimen book. It has survived.
+                        </div>
+                    </div>
+                    <div class="worc-block__retro-image"></div>
+                </div>
+                <div class="worc-block__column">
+                    <a href="" class="worc-block__item retro-item-r">
+                        <span class="retro-item-r__logo">
+                            <img src="../build/assets/images/work/logos/03.png" alt="">
+                        </span>
+                        <span class="retro-item__image"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="main-container__twitter-block">
+            <div class='container'>
+                <div class="twitter-block block">
+                    <div class="twitter-block__icon">
+                        <img src="../build/assets/icons/twitter.png" alt="">
+                    </div>
+                    <h1 class="twitter-block__title">
+                        AOD New York @aod <span>/ 35 min</span>
+                    </h1>
+                    <div class="twitter-block__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus.
+                        Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+                    </div>
+                    <ul class="twitter-block__slider slider">
+                        <li class="slider__dot slider__dot-activ"></li>
+                        <li class="slider__dot"></li>
+                        <li class="slider__dot"></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="shop" class="shop">
+            <a name="shop"></a>
+            <div class="shop-body">
+                <div class="shop-body__colom colom-saddle">
+                    <div class="colom-saddle__l">
+                        <a href="" class="colom-saddle__l_img01 item">
+                            <span class="item__logo">
+                                <img src="./assets/icons/bike.png" alt="">
+                                <span>Shop now</span>
+                            </span>
+                            <span class="colom-saddle__l_img01">
+                            </span>
+                        </a>
+                        <a href="" class="colom-saddle__l_img02 item">
+                            <span class="item__logo">
+                                <img src="./assets/icons/bike.png" alt="">
+                                <span>Shop now</span>
+                            </span>
+                            <span class="colom-saddle__l_img02">
+                            </span>
+                        </a>
+                    </div>
+                    <div class="colom-saddle__b">
+                        <a href="" class="colom-saddle__b_img03 item">
+                            <span class="item__logo">
+                                <img src="./assets/icons/bike.png" alt="">
+                                <span>Shop now</span>
+                            </span>
+                            <span class="colom-saddle__b_img03">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="shop-body__colom colom-brake">
+                    <div class="colom-brake__l">
+                        <a href="" class="colom-brake__l_img04 item">
+                            <span class="item__logo">
+                                <img src="./assets/icons/bike.png" alt="">
+                                <span>Shop now</span>
+                            </span>
+                            <span class="colom-brake__l_img04"></span>
+                        </a>
+                        <a href="" class="colom-brake__l_img05 item">
+                            <span class="item__logo">
+                                <img src="./assets/icons/bike.png" alt="">
+                                <span>Shop now</span>
+                            </span>
+                            <span class="colom-brake__l_img05"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="shop-body__colom colom-acces">
+                    <div class="colom-acces__b">
+                        <a href="" class="colom-acces__b_img06 item">
+                            <span class="item__logo">
+                                <img src="./assets/icons/bike.png" alt="">
+                                <span>Shop now</span>
+                            </span>
+                            <span class="colom-acces__b_img06">
+                            </span>
+                        </a>
+                    </div>
+                    <div class="colom-acces__l">
+                        <a href="" class="colom-acces__l_img07 item">
+                            <span class="item__logo">
+                                <img src="./assets/icons/bike.png" alt="">
+                                <span>Shop now</span>
+                            </span>
+                            <span class="colom-acces__l_img07">
+                            </span>
+                        </a>
+                        <a href="" class="colom-acces__l_img08 item">
+                            <span class="item__logo">
+                                <img src="./assets/icons/bike.png" alt="">
+                                <span>Shop now</span>
+                            </span>
+                            <span class="colom-acces__l_img08">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="shop__footer">
+                <div class='container'>
+                    <a href="" class="shop__btn">DISCOVER THE SHOP</a>
+                </div>
+            </div>
+        </section>
+        <div class="subscribe">
+            <div class='container'>
+                <div class="subscribe__body">
+                    <div class="subscribe__logo">
+                        <img src="./assets/Header_Logo.png" alt="">
+                    </div>
+                    <div class="subscribe__label">
+                        Stay on the saddle!
+                    </div>
+                    <form action="#" class="subscribe__form">
+                        <div class="subscribe__input">
+                            <input autocomplete="off" type="text" name="form[]" data-value="enter your email..."
+                                class="input req email">
+                        </div>
+                        <div class="subscribe__button">
+                            <button type="submit" class="subscribe__btn">GO</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer" id="contact">
+        <a name="contact"></a>
+        <div class='container'>
+            <div class="footer__row">
+                <div class="footer__column">
+                    <div class="footer__address">
+                        <p>AOD New York</p>
+                        <p>2250 Lexington Avenue </p>
+                        <p>New York, NY 10035 - info@domain.com</p>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <div class="footer__social social">
+                        <a href="" class="social__link">
+                            <img src="./assets/icons/social/01.png" alt="">
+                        </a>
+                        <a href="" class="social__link">
+                            <img src="./assets/icons/social/02.png" alt="">
+                        </a>
+                        <a href="" class="social__link">
+                            <img src="./assets/icons/social/03.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <div id="back-top">
+        <a href="#" onclick="return up()">▲</a>
+    </div>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/backtop.js"></script>
+</body>
+
+</html>

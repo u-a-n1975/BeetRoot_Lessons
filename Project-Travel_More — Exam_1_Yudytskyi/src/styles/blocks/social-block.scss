@@ -1,0 +1,62 @@
+.social-block {
+
+  &__facebook,
+  &__twitter,
+  &__linkedin,
+  &__youtube,
+  &__pinterest {
+    width: 16px;
+    height: 16px;
+    transition: color, text-shadow 0.3s ease 0s;
+  }
+
+  &__facebook {
+    &:hover {
+      text-shadow: 0px 0px 2px #ffffff;
+
+      .cls-1 {
+        fill: #4267B2;
+      }
+    }
+  }
+
+  &__twitter {
+    &:hover {
+      text-shadow: 0px 0px 2px #ffffff;
+
+      .cls-1 {
+        fill: #00acee;
+      }
+    }
+  }
+
+  &__linkedin {
+    &:hover {
+      text-shadow: 0px 0px 2px #ffffff;
+
+      .cls-1 {
+        fill: #5474fd;
+      }
+    }
+  }
+
+  &__youtube {
+    &:hover {
+      text-shadow: 0px 0px 2px #ffffff;
+
+      .cls-1 {
+        fill: #c4302b;
+      }
+    }
+  }
+
+  &__pinterest {
+    &:hover {
+      text-shadow: 0px 0px 2px #ffffff;
+
+      .cls-1 {
+        fill: #c61317;
+      }
+    }
+  }
+}

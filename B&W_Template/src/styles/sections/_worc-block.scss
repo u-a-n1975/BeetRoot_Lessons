@@ -1,0 +1,278 @@
+//===============section worc-block===============
+
+
+.worc-block {
+
+	&__boriosa {
+		.worc-block__column {
+			@include flexorder(1);
+
+			&_b {
+				@include flexorder(2);
+			}
+		}
+	}
+
+	&_last {}
+
+	&__vintage {
+		@include flexbox();
+	}
+
+	&__boriosa {
+		@include flexbox();
+	}
+
+	&__retro {
+		@include flexbox();
+	}
+
+	&__column {
+		flex: 0 1 33.333%;
+
+		&_b {
+			flex: 0 1 66.667%;
+		}
+	}
+
+	&__item {}
+
+	&__content {
+		padding: 70px 65px 55px 65px;
+		position: relative;
+	}
+
+	&__vintage-image {
+		padding: 0px 0px 37.51% 0px;
+		@include bgimg("./../assets/images/work/02.jpg");
+	}
+
+	&__boriosa-image {
+		padding: 0px 0px 37.51% 0px;
+		@include bgimg("./../assets/images/work/03.jpg");
+	}
+
+	&__retro-image {
+		padding: 0px 0px 37.51% 0px;
+		@include bgimg("./../assets/images/work/06.jpg");
+	}
+
+	@media (max-width:$deviceSizeLS) {
+		&__content {
+			padding: 40px 35px 30px 35px;
+		}
+	}
+
+	@media (max-width:$deviceSizeMD) {
+		&_last {
+			.worc-block__column {
+				&:nth-child(1) {
+					@include flexorder(2);
+				}
+
+				&:nth-child(2) {
+					@include flexorder(1);
+				}
+
+				&:nth-child(3) {
+					@include flexorder(3);
+				}
+			}
+		}
+
+		&__vintage {
+			flex-direction: column;
+		}
+
+		&__boriosa {
+			flex-direction: column;
+		}
+
+		&__retro {
+			flex-direction: column;
+		}
+	}
+}
+
+.vintage-item {
+	height: 100%;
+	display: block;
+	position: relative;
+	@include bgimg("./../assets/images/work/01.jpg");
+
+	&__logo {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		@include flexbox();
+		flex-direction: column;
+		@include anim(0.3s, 0s);
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(100, 194, 158, 0.5);
+		z-index: 2;
+		opacity: 0;
+		visibility: hidden;
+
+		span {
+			margin: 10px 0px 0px 0px;
+			font-size: 14px;
+			font-weight: 700;
+			letter-spacing: 2.8px;
+			text-transform: uppercase;
+			color: #fff;
+		}
+	}
+
+	&__vintage-image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	&:hover {
+		.vintage-item__logo {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	@media (max-width:$deviceSizeMD) {
+		height: auto;
+		padding: 0px 0px 70% 0px;
+	}
+}
+
+
+.boriosa-item {
+	height: 100%;
+	display: block;
+	position: relative;
+	@include bgimg("./../assets/images/work/04.jpg");
+
+	&__logo {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		@include flexbox();
+		flex-direction: column;
+		@include anim(0.3s, 0s);
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(100, 194, 158, 0.5);
+		z-index: 2;
+		opacity: 0;
+		visibility: hidden;
+
+		span {
+			margin: 10px 0px 0px 0px;
+			font-size: 14px;
+			font-weight: 700;
+			letter-spacing: 2.8px;
+			text-transform: uppercase;
+			color: #fff;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	&:hover {
+		.boriosa-item__logo {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	@media (max-width:$deviceSizeMD) {
+		height: auto;
+		padding: 0px 0px 70% 0px;
+	}
+}
+
+.retro-item-l {
+	height: 100%;
+	display: block;
+	position: relative;
+	@include bgimg("./../assets/images/work/05.jpg");
+
+	&__logo {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		@include flexbox();
+		flex-direction: column;
+		@include anim(0.3s, 0s);
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(100, 194, 158, 0.5);
+		z-index: 2;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&:hover {
+		.retro-item-l__logo {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	@media (max-width:$deviceSizeMD) {
+		height: auto;
+		padding: 0px 0px 70% 0px;
+	}
+}
+
+.retro-item-r {
+	height: 100%;
+	display: block;
+	position: relative;
+	@include bgimg("./../assets/images/work/07.jpg");
+
+	&__logo {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		@include flexbox();
+		flex-direction: column;
+		@include anim(0.3s, 0s);
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(100, 194, 158, 0.5);
+		z-index: 2;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&:hover {
+		.retro-item-r__logo {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	@media (max-width:$deviceSizeMD) {
+		height: auto;
+		padding: 0px 0px 70% 0px;
+	}
+}
+
+//===========end section worc-block===============
+
+//------------------------------------------------
