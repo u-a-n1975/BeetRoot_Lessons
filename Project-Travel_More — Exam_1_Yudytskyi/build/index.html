@@ -9,13 +9,17 @@
   <title>Travel More</title>
   <link rel="stylesheet" href="./styles/main.css" />
 
+  <!-- Подключение fontawesome -->
+  <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
   <!-- Подключение javascript -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
   <!-- Плавный переход по ссылке -->
   <script type="text/javascript">
     $(document).ready(function () {
-      $("#menu").on("click", "a", function (event) {
+      $("#menu, #scroll").on("click", "a", function (event) {
         //отменяем стандартную обработку нажатия по ссылке
         event.preventDefault();
 
@@ -107,9 +111,9 @@
                 class="input req email" />
             </div>
             <button class="search-form__button" type="submit">
-              search
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="32" height="32" viewBox="0 0 32 32">
+              <span>search</span>
+              <svg class="svg" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
                 <g id="icomoon-ignore">
                 </g>
                 <path
@@ -121,17 +125,9 @@
         </div>
       </div> <!-- ----- End Search-Form  ----- -->
 
-      <div class="hero__scroll">
+      <div id="scroll" class="hero__scroll">
         <span class="hero__scroll--text"> Scroll Down</span>
-        <div class="hero__scroll--icon">
-          <svg class="hero__scroll--icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
-            <g id="icomoon-ignore"></g>
-            <path
-              d="M15.214 19.175l0.754 0.754 6.035-6.035-0.754-0.754-5.281 5.281-5.256-5.256-0.754 0.754 3.013 3.013z"
-              fill="#ffffff"></path>
-          </svg>
-        </div>
+        <a href="#footer" class="hero__scroll--icon"></a>
       </div>
 
     </section> <!-- ***** End Section  <- HERO -> ***** -->
@@ -262,7 +258,7 @@
 
         <div class="section__right">
 
-           <!-- ---------- Title-Block ---------- -->
+          <!-- ---------- Title-Block ---------- -->
           <div class="title-block right__title-block">
             <p class="title-block__subtitle">spain</p>
             <div class="title-block__title">
@@ -278,7 +274,7 @@
               <div class="title-block__button--fon"></div>
               <a href="#" onclick="return up()">book now</a>
             </div>
-          </div>  <!-- ----- End Title-Block ----- -->
+          </div> <!-- ----- End Title-Block ----- -->
 
         </div>
 
@@ -305,11 +301,6 @@
               SAM SUMON
             </div>
             <div class="info-block__text--subtitle">
-              <svg class="info-block__text--subtitle-svg" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" width="38px" height="42px">
-                <text font-family="FontAwesome" fill="rgb(84, 116, 253)" baseline-shift="super" font-size="36px" x="0px"
-                  y="1em">&#61709;&#32;&#32</text>
-              </svg>
               But I must explain to you how all this mistaken idea of account to denouncinpleasure and praising pain
               But I must explain to you how all this mistaken idea of account to nai denouncing pleasure and
               praising
@@ -328,7 +319,7 @@
     <!-- *************** <- FOOTER -> *************** -->
     <footer id="footer" class="footer"> <a name="footer"></a>
 
-      <a  href="#" class="footer__title" onclick="return up()">
+      <a href="#" class="footer__title" onclick="return up()">
         bhromaon
       </a>
       <div class="footer__subtitle">
@@ -337,93 +328,11 @@
 
       <!-- ---------- Social-Block ---------- -->
       <div class="social-block footer__social-block">
-        <div class="social-block__facebook">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 16">
-            <defs>
-              <style>
-                .social-block__facebook--svg {
-                  fill: #FFFFFF;
-                  font-size: 16px;
-                  font-family: FontAwesome;
-                  letter-spacing: 0.1em;
-                }
-              </style>
-            </defs>
-            <text id="_" data-name="" class="cls-1" transform="translate(5 14)">
-              <tspan x="-4.571" y="0"></tspan>
-            </text>
-          </svg>
-        </div>
-        <div class="social-block__twitter">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-            <defs>
-              <style>
-                .cls-1 {
-                  fill: #FFFFFF;
-                  font-size: 16px;
-                  font-family: FontAwesome;
-                  letter-spacing: 0.1em;
-                }
-              </style>
-            </defs>
-            <text id="_" data-name="" class="cls-1" transform="translate(8 14)">
-              <tspan x="-7.429" y="0"></tspan>
-            </text>
-          </svg>
-        </div>
-        <div class="social-block__linkedin">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16">
-            <defs>
-              <style>
-                .cls-1 {
-                  fill: #FFFFFF;
-                  font-size: 16px;
-                  font-family: FontAwesome;
-                  letter-spacing: 0.1em;
-                }
-              </style>
-            </defs>
-            <text id="_" data-name="" class="cls-1" transform="translate(7 14)">
-              <tspan x="-6.857" y="0"></tspan>
-            </text>
-          </svg>
-
-        </div>
-        <div class="social-block__youtube">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 16">
-            <defs>
-              <style>
-                .cls-1 {
-                  fill: #FFFFFF;
-                  font-size: 16px;
-                  font-family: FontAwesome;
-                  letter-spacing: 0.1em;
-                }
-              </style>
-            </defs>
-            <text id="_" data-name="" class="cls-1" transform="translate(9 14)">
-              <tspan x="-8" y="0"></tspan>
-            </text>
-          </svg>
-        </div>
-        <div class="social-block__pinterest">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16">
-            <defs>
-              <style>
-                .cls-1 {
-                  fill: # fill: #FFFFFF;
-                  ;
-                  font-size: 16px;
-                  font-family: FontAwesome;
-                  letter-spacing: 0.1em;
-                }
-              </style>
-            </defs>
-            <text id="_" data-name="" class="cls-1" transform="translate(7 14)">
-              <tspan x="-6.857" y="0"></tspan>
-            </text>
-          </svg>
-        </div>
+        <a href="#" class="social-block__facebook" onclick="return up()"></a>
+        <a href="#" class="social-block__twitter" onclick="return up()"></a>
+        <a href="#" class="social-block__linkedin" onclick="return up()"></a>
+        <a href="#" class="social-block__youtube" onclick="return up()"></a>
+        <a href="#" class="social-block__pinterest" onclick="return up()"></a>
       </div> <!-- ----- End Social-Block  ----- -->
 
     </footer> <!-- ***** End Section  <- FOOTER -> ***** -->
@@ -431,7 +340,7 @@
 
   <!-- ---------- smooth return up ---------- -->
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/backtop.js"></script>
-   <!-- ----- END smooth return up ----- -->
+  <!-- ----- END smooth return up ----- -->
 
 
 </body>

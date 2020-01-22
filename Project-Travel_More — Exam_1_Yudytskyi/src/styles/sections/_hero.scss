@@ -31,7 +31,7 @@
     text-transform: uppercase;
     white-space: nowrap;
     letter-spacing: 4.8px;
-    transition: text-shadow 0.3s ease 0s;
+    transition: color, text-shadow 0.3s ease 0s;
 
 
     &:hover {
@@ -58,10 +58,10 @@
     text-transform: capitalize;
     white-space: nowrap;
     letter-spacing: 6.82px;
-    transition: text-shadow 0.3s ease 0s;
+    transition: color, text-shadow 0.3s ease 0s;
 
     &:hover {
-      text-shadow: 1px 1px 2px black, 0 0 50px gold;
+      text-shadow: 1px 1px 2px black, 0 0 16px gold;
       color: #5474FD;
     }
 
@@ -96,7 +96,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 120px;
-    transition: text-shadow 0.3s ease 0s;
+    transition: color, text-shadow 0.3s ease 0s;
 
     &--text {
       color: #ffffff;
@@ -105,41 +105,39 @@
       transition: text-shadow 0.3s ease 0s;
 
       &:hover {
-        text-shadow: 1px 1px 2px black, 0 0 50px gold;
+        text-shadow: 1px 1px 2px black, 0 0 10px gold;
         color: #5474FD;
       }
     }
 
     &--icon {
-      width: 20px;
-      height: 20px;
       display: flex;
-      align-content: center;
       justify-content: center;
+      align-content: center;
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
-      transition: text-shadow, border, box-shadow 0.3s ease 0s;
+      font-family: FontAwesome;
+      font-size: 16px;
+      line-height: 16px;
+      color: #ffffff;
+      transition: font-size, line-height, transform, color, text-shadow, box-shadow, 0.3s ease 0s;
 
-      path {
-        fill: #ffffff;
+      &::before {
+        content: "\f107";
       }
 
       &:hover {
-        border: 1px solid #5474FD;
-        box-shadow: 0 0 20px #5474FD;
-        transform: translateY(-1px);
+        font-size: 30px;
+        line-height: 30px;
+        text-shadow: 1px 1px 2px black, 0 0 16px gold;
+        color: #5474FD;
+        transform: rotateY(45deg);
+      }
 
-        path {
-          fill: #5474FD;
-        }
-
+      &:active {
+        text-shadow: 1px 1px 2px black, 0 0 16px gold;
       }
     }
-
-    &:hover {
-      cursor: pointer;
-      text-shadow: 1px 1px 2px black, 0 0 50px #5474FD;
-      color: #5474FD;
-    }
   }
-
 }

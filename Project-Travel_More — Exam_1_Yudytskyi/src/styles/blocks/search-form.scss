@@ -56,6 +56,11 @@
     letter-spacing: 1.4px;
     text-overflow: ellipsis;
     text-align: center;
+    transition: svg, transform, rotate, width, height, background-color, color, fill 1.3s ease 0s;
+
+    span {
+      margin-right: 8px;
+    }
 
     @media (max-width:$deviceSizeMD) {
       min-width: 70px;
@@ -68,6 +73,10 @@
     }
 
     &:hover {
+      span {
+        margin-right: 0px;
+      }
+
       svg {
         width: 40px;
         height: 40px;
